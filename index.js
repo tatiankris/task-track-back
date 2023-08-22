@@ -15,7 +15,11 @@ const corsOptions = {
         [
             'http://localhost:3000',
             'https://tasks-track.vercel.app'
-        ]
+        ],
+    credentials: true,
+    optionsSuccessStatus: 200,
+    methods: ['GET', 'PUT', 'POST', 'DELETE', 'PATCH'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-CSRF-Token', 'X-Requested-With', 'Accept', 'Accept-Version', 'Content-Length', 'Content-MD5', 'Date', 'X-Api-Version']
 }
 
 app.use(cors(corsOptions))
